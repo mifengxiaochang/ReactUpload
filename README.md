@@ -37,7 +37,7 @@
 
     GranularUpgradeDto upgradeDto = new GranularUpgradeDto();
     upgradeDto = upgradeFileDto.upgradeDto;
-    upgradeDto.JsonFile = new byte[upgradeFileDto.fileData.Count];
+    upgradeDto.JsonFile = new byte[upgradeFileDto.fileData.Count];//Dictionary transfer byte[]
     for (int i = 0; i < upgradeFileDto.fileData.Count; i++)
     { 
       upgradeDto.JsonFile[i] = (byte)(upgradeFileDto.fileData[i]);   
