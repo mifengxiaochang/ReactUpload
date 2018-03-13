@@ -40,12 +40,7 @@ export default class ImportDoc extends React.Component {
                 reader.onload =(re) =>{
                     self.state.importFile.name = file.name;
                     let buffers = new Uint8Array(re.target.result);
-                    self.state.importFile.content = buffers;   
-                    //self.state.importFile.type = self.getFileType(file.name);                    
-                    //self.props.getFile('importFile', self.state.importFile);
-                    
-                    self.props.getFile('importFile', self.state.importFile);
-                    self.props.changeNextEnabled(true);
+                    self.state.importFile.content = buffers; 
                 };
             } catch (e) {
                 let titleMsg =  I18N.get("Common.Gui", "ControlPanel.Gui_DocAve");
