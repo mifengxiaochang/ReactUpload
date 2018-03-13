@@ -33,7 +33,7 @@ export default class ImportDoc extends React.Component {
                     $$.toolkit_alert("show",
                         {
                             type: "e",
-                            content: I18N.get("Common.Gui", "ControlPanel.Gui_b67aa7f5-b452-47e2-a8ff-5079286d8497"),
+                            content: "Import Failed",
                         }
                     );
                 };
@@ -43,7 +43,7 @@ export default class ImportDoc extends React.Component {
                     self.state.importFile.content = buffers; 
                 };
             } catch (e) {
-                let titleMsg =  I18N.get("Common.Gui", "ControlPanel.Gui_DocAve");
+                let titleMsg =  "Warn";
                 $$.toolkit_alert("show", {
                     title: titleMsg,
                     content: "Can't Import the file",
@@ -63,11 +63,11 @@ export default class ImportDoc extends React.Component {
     render() {
         return (
             <div>
-                <label>{I18N.get('Common.Gui', 'ControlPanel.Gui_d7334efb-ddee-463a-8125-4e72e749f091')}</label>
-                <input type='text' disabled={true} id="cp-datamanager-import-filename-text" style={{ marginLeft: 10, marginRight: 10 }}
+                <label>"Import"</label>
+                <input type='text' disabled={true} id="import-filename-text" style={{ marginLeft: 10, marginRight: 10 }}
                     value={this.state.importFile.name} />
                 <input hidden type='file' accept='.json' onChange={this.readFileContent} ref={(ref) => { this.fileControl = ref }} />
-                <input type="button" className="button button-default" id="cp-datamanager-import-browse-button" value={I18N.get('Common.Gui', 'ControlPanel.Gui_Browse')}
+                <input type="button" className="button button-default" id="browse-button" value={"Browser"}
                     onClick={this.handleBrowseFile} />
             </div>
         );
