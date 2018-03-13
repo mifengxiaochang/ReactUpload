@@ -9,7 +9,7 @@ namespace ControlPanel.Controller
         
         public IMPlatformRecoveryService MPlatformRecoveryService { get; set; }
 
-        #region Import
+        #region Tansfer
       
         [HttpPost, Route("upgradefile")]
         public void UpgradeImportFileData(UploadSFileDto upgradeFileDto)
@@ -30,7 +30,7 @@ namespace ControlPanel.Controller
 
         #endregion
 
-        #region Transfer
+        #region Import
         
         [HttpPost, Route("upgtadeplatform")]
         public string UpgradeImportData(PlatformUpgradeParamDto dto)
