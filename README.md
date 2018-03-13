@@ -25,7 +25,6 @@
                     self.state.importFile.content = buffers;  //获取buffers
                 };
             } catch (e) {
-               
                 $$.toolkit_alert("show", {
                     title: "Warn",
                     content: "Can't Import the file",
