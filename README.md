@@ -1,5 +1,5 @@
 # ReactUpload
-##前台file阅读文件内容
+## 前台file阅读文件内容
  
 * readFileContent(e) {
 >       let self = this;
@@ -33,4 +33,4 @@
             }
         }
     }
-    ###后台建立Model通过字典型接受转换完成文件存储
+### 后台建立Model通过字典型接受转换完成文件存储
