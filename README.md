@@ -34,3 +34,17 @@
         }
     }
 ### 后台建立Model通过字典型接受转换完成文件存储
+
+ GranularUpgradeDto upgradeDto = new GranularUpgradeDto();
+
+ upgradeDto = upgradeFileDto.upgradeDto;
+
+ upgradeDto.JsonFile = new byte[upgradeFileDto.fileData.Count];
+
+ for (int i = 0; i < upgradeFileDto.fileData.Count; i++)
+
+ {
+ 
+   upgradeDto.JsonFile[i] = (byte)(upgradeFileDto.fileData[i]);
+   
+}    
