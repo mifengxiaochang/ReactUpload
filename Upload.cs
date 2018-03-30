@@ -1,8 +1,8 @@
 
-namespace ControlPanel.Controller
+namespace Upload.Controller
 {
   
-    [RoutePrefix("api/datamanager")]
+    [RoutePrefix("api/upload")]
    
     public class DataManagerController : ApiController
     {
@@ -14,7 +14,7 @@ namespace ControlPanel.Controller
         [HttpPost, Route("upgradefile")]
         public void UpgradeImportFileData(UploadSFileDto upgradeFileDto)
         {
-            GranularUpgradeDto upgradeDto = new GranularUpgradeDto();
+            UpgradeDto upgradeDto = new UpgradeDto();
 
             upgradeDto = upgradeFileDto.upgradeDto;
             upgradeDto.JsonFile = new byte[upgradeFileDto.fileData.Count];
@@ -46,7 +46,7 @@ namespace ControlPanel.Controller
         {
             get; set;
         }
-        public GranularUpgradeDto upgradeDto { get; set; }
+        public UpgradeDto upgradeDto { get; set; }
     }
 
 }
