@@ -42,3 +42,8 @@
     { 
       upgradeDto.JsonFile[i] = (byte)(upgradeFileDto.fileData[i]);   
     }    
+    
+    
+    
+    参考资料
+    [前端本地文件操作与上传](http://web.jobbole.com/93227/)
